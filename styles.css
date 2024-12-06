@@ -1,0 +1,1300 @@
+*{
+  text-align: center;
+  align-items: center;
+}
+
+/* General Styles */
+body {
+  font-family: 'Kuro', Arial, sans-serif; /* Fuente corporativa */
+  margin: 0;
+  padding: 0;
+  background-color: #F9F9F9;
+  color: #000; /* Establece la fuente en negro */
+  text-align: center;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6, p, div, section, span {
+  font-family: 'Kuro', Arial, sans-serif; /* Aplica Kuro a todos los textos */
+}
+
+/**h1, h2, p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #000; 
+}**/
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #fff, #8DC640); /* Verde corporativo */
+  color: #4E5464;
+  z-index: 1000;
+}
+
+.top-bar {
+  background: #8DC640;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-bar a {
+  color: #000;
+  text-decoration: none;
+  font-family: 'Exo', Arial, sans-serif;
+  font-weight: 600;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: invert(1); /* Hace que los íconos blancos sean visibles en el fondo verde */
+}
+
+/* WhatsApp Button */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.whatsapp img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Scroll-to-top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: none;
+  background: #8DC640; /* Verde corporativo */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Sección de Bienvenida */
+.welcome {
+  position: relative;
+  display: flex; /* Configura una disposición horizontal */
+  height: 70vh; /* Ocupa todo el alto del viewport */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: space-between; /* Asegura espacio entre el texto y la imagen */
+  padding: 50px 20px;
+  background: url('blur3.png') no-repeat center center / cover;
+  color: #000;
+  overflow: hidden; /* Oculta cualquier contenido desbordado */
+}
+
+/* Contenedor de Texto y Botones */
+.welcome .text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.welcome .text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.welcome .text p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.welcome .buttons {
+  display: flex; /* Mantén el diseño flexible */
+  justify-content: center; /* Centra horizontalmente los botones */
+  align-items: center; /* Centra verticalmente */
+  gap: 15px; /* Espaciado entre botones */
+}
+
+.welcome .buttons button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #8DC640; /* Color corporativo principal */
+  color: white;
+}
+
+.welcome .buttons button:hover {
+  background-color: #7DF31F; /* Color más claro al pasar el cursor */
+  transform: scale(1.05); /* Agranda ligeramente al pasar el cursor */
+}
+
+
+/* Imagen en la Sección 
+.welcome .image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center; 
+}
+
+.welcome .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease; 
+} */
+
+/*.welcome .image img:hover {
+  transform: translateY(-20px); 
+}*/
+
+/* Carrusel de imágenes */
+/* Espacio entre el encabezado y el carrusel */
+.welcome {
+  margin-top: 80px; /* Asegura un margen superior */
+}
+
+/* Carrusel ajustado */
+.welcome .carousel {
+  position: relative;
+  width: 100%;
+  max-width: 360px; /* Ancho máximo del carrusel */
+  height: 360px; /* Altura fija */
+  margin: 0 auto; /* Centra el carrusel horizontalmente */
+  overflow: hidden; /* Oculta imágenes fuera del contenedor */
+  display: flex;
+  align-items: center; /* Centra verticalmente las imágenes */
+}
+
+/* Track del carrusel */
+.welcome .carousel .carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Suave transición */
+  width: 100%; /* Asegura que las imágenes ocupen todo el ancho */
+}
+
+/* Imágenes del carrusel */
+.welcome .carousel img {
+  width: 360px; /* Ajusta exactamente al ancho del carrusel */
+  height: 360px; /* Ajusta exactamente a la altura del carrusel */
+  flex-shrink: 0; /* Cada imagen ocupa el espacio completo del carrusel */
+  object-fit: fill; /* Ajusta las imágenes al contenedor sin deformarse */
+}
+
+
+
+/* Carrusel de imágenes 
+.welcome .carousel {
+  position: relative;
+  width: 100%;
+  max-width: 600px; 
+  height: 300px; 
+  margin: 0 auto;
+  overflow: hidden; 
+}
+
+.welcome .carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease; 
+} 
+*/
+
+.welcome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Capa translúcida */
+  backdrop-filter: blur(4px); /* Desenfoque principal */
+  -webkit-backdrop-filter: blur(4px); /* Compatibilidad con Safari */
+  z-index: -1; /* Coloca detrás del contenido */
+  pointer-events: none; /* Asegura que no interfiera con los eventos */
+}
+
+
+.welcome::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5); /* Capa translúcida */
+  backdrop-filter: blur(2px); /* Aplicamos el blur */
+  z-index: -1; /* Coloca la capa translúcida detrás del contenido */
+}
+
+.services {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 50px 20px;
+  background: url('wallpaper3.jpg') no-repeat center center / cover;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #CAC833; /* Color secundario */
+}
+
+.image-space {
+  height: 100px;
+  background: #8DC640; /* Fondo de imágenes */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/*.appointment {
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+  background: url('wallpaper3.jpg') no-repeat center center / cover;
+  color: black;
+}*/
+/* Sección 3: Cita */
+.appointment {
+  align-items: center;
+  padding: 50px 20px;
+  text-align: center;
+  background: url('wallpaper3.jpg') no-repeat center center / cover; /* Fondo ajustado */
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Texto dentro de la cita */
+.appointment .text {
+  margin-bottom: 20px;
+}
+
+/* Contenedor de la imagen */
+.appointment .image {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.appointment .image img {
+  width: 50px; /* Ajustar tamaño de la imagen */
+  height: 50px; /* Ajustar tamaño de la imagen */
+  object-fit: contain; /* Asegura que la imagen mantenga su proporción */
+  border-radius: 50%; /* Opcional: hacer la imagen circular */
+}
+
+.achievements {
+  padding: 40px 20px;
+  background: url('wallpaper3.jpg') no-repeat center center / cover;
+  color: black;
+  text-align: center;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.achievements li {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 50px 20px;
+  background: url('faq-bg.jpg') no-repeat center center / cover;
+  color: white;
+}
+
+.question {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+}
+
+/* Blog Section */
+.blog {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  background: url('blog-bg.jpg') no-repeat center center / cover;
+}
+
+.blog-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  border: 2px solid #CAC833; /* Resalta las tarjetas */
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  background: url('contact-bg.jpg') no-repeat center center / cover;
+  color: white;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+/* Map Section */
+.map iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+}
+
+
+
+/* Sección de Preguntas Frecuentes */
+.faq {
+  padding: 50px 20px;
+  background: url('faq-bg.jpg') no-repeat center center / cover;
+  color: #000; /* Cambia el texto a negro */
+}
+
+.faq h2,
+.faq .question {
+  color: #000; /* Asegura que el título y las preguntas estén en negro */
+}
+
+/* Hover en botones */
+button:hover {
+  background-color: #7DF31F; /* Color más claro */
+  transform: scale(1.1); /* Agranda ligeramente */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade sombra */
+}
+
+/* Hover en cards */
+.card:hover {
+  transform: translateY(-10px); /* Eleva ligeramente */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Añade sombra */
+  transition: all 0.3s ease; /* Suaviza la transición */
+}
+
+/* Hover en enlaces del menú */
+.nav-bar a:hover {
+  color: #8DC640; /* Cambia el color al pasar el cursor */
+  border-bottom: 2px solid #8DC640; /* Añade línea decorativa */
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .cards {
+    gap: 15px;
+  }
+
+  .card {
+    width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column; /* Cambia las tarjetas a una sola columna */
+    align-items: center; /* Centra las tarjetas en la columna */
+  }
+
+  .card {
+    width: 90%; /* Ocupa casi todo el ancho de la pantalla */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column; /* Cambia el header a un diseño vertical */
+    align-items: flex-start;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav-bar ul {
+    flex-direction: column; /* Muestra los enlaces en columna */
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-bar ul li {
+    text-align: left;
+    width: 100%;
+  }
+
+  .nav-bar a {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 35px;
+  }
+
+  .nav-bar ul {
+    gap: 5px;
+  }
+
+  .nav-bar a {
+    font-size: 0.8rem;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.blur-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('material-de-laboratorio.jpg') no-repeat center center / cover;
+  filter: blur(4px); /* Aplica desenfoque */
+  z-index: -1; /* Coloca detrás del contenido */
+}
+
+/*Forzamos la fuente*/
+* {
+  font-family: 'Exo', Arial, sans-serif !important;
+}
+
+.image-space {
+  display: flex; /* Activa Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100px; /* Asegura un tamaño fijo para el contenedor */
+  background: #8DC640; /* Fondo de las imágenes */
+  border-radius: 10px;
+  overflow: hidden; /* Oculta contenido desbordado */
+}
+
+.image-space img {
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  max-height: 100%; /* Asegura que la imagen no exceda la altura del contenedor */
+  object-fit: contain; /* Ajusta la imagen sin deformarla */
+}
+
+/* Estilos generales de la sección */
+.achievements {
+  padding: 50px 20px;
+  text-align: center;
+  background: url('wallpaper3.jpg') no-repeat center center / cover; /* Fondo */
+  color: black;
+}
+
+.achievements h3 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-family: 'Kuro', Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.achievements-container {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que los elementos se adapten al tamaño de pantalla */
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Estilo para las cards de Misión y Visión */
+.card {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px; /* Ancho fijo */
+  text-align: center;
+  border: 2px solid #CAC833; /* Borde decorativo */
+}
+
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #000; /* Texto en negro */
+}
+
+/* Estilo para la lista de valores */
+.values {
+  text-align: left; /* Alinea el contenido a la izquierda */
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px; /* Ancho fijo */
+  border: 2px solid #CAC833;
+}
+
+.values h3 {
+  text-align: center; /* Centra el título */
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.values ul {
+  list-style: none; /* Elimina las viñetas predeterminadas */
+  padding: 0;
+}
+
+.values li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #000;
+}
+
+.values li img {
+  width: 24px; /* Tamaño del ícono */
+  height: 24px;
+  margin-right: 10px; /* Espaciado entre el ícono y el texto */
+}
+
+.values li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #000;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.values li:hover {
+  transform: translateY(-5px); /* Eleva ligeramente el elemento */
+  background-color: #f0f0f0; /* Cambia el fondo al pasar el cursor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra */
+}
+
+.values li img {
+  width: 24px; /* Tamaño inicial del ícono */
+  height: 24px;
+  margin-right: 10px; /* Espaciado entre el ícono y el texto */
+  transition: transform 0.3s ease; /* Transición suave para el ícono */
+}
+
+.values li:hover img {
+  transform: scale(1.2); /* Aumenta ligeramente el tamaño del ícono */
+}
+
+/* Tarjeta de valores */
+.values {
+  text-align: left;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px; /* Ancho fijo */
+  border: 2px solid #CAC833;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.values:hover {
+  transform: translateY(-10px); /* Eleva la tarjeta ligeramente */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Añade una sombra más grande */
+  background-color: #f8f8f8; /* Opcional: Cambia ligeramente el fondo */
+}
+
+/* Contenedor de las tarjetas */
+.achievements-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaciado entre tarjetas */
+  align-items: stretch; /* Asegura que todas tengan la misma altura */
+}
+
+/* Estilo para las tarjetas */
+.card, .values {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+  border-radius: 10px;
+  padding: 16px;
+  width: 300px; /* Ancho fijo */
+  text-align: center;
+  border: 2px solid #CAC833; /* Borde decorativo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  box-sizing: border-box; /* Incluye padding en el tamaño */
+  flex: 1; /* Asegura que todas las tarjetas ocupen el mismo espacio vertical */
+}
+
+/* Fondo de la sección FAQ */
+.faq {
+  padding: 50px 20px;
+  background: url('wallpaper3.jpg') no-repeat center center / cover; /* Imagen de fondo */
+  color: #000; /* Texto negro */
+  border-radius: 10px;
+}
+
+/* Estilo de las preguntas */
+.faq-question {
+  font-weight: bold;
+  cursor: pointer; /* Cambia el cursor a "clickeable" */
+  margin: 10px 0;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo claro */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #f0f0f0; /* Fondo más claro al pasar el mouse */
+}
+
+/* Estilo de las respuestas */
+.faq-answer {
+  display: none; /* Inicialmente oculta */
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo claro */
+  border-left: 3px solid #CAC833; /* Línea decorativa */
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Fondo de la sección Blog */
+.blog {
+  padding: 50px 20px;
+  background: url('wallpaper3.jpg') no-repeat center center / cover; /* Imagen de fondo */
+  color: #000;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las cards horizontalmente */
+  gap: 20px; /* Espaciado entre cards */
+}
+
+/* Estilo de las cards */
+/* Cards del Blog */
+.blog-card {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px; /* Ancho fijo */
+  height: 350px; /* Altura fija para todas las tarjetas */
+  text-align: center;
+  border: 2px solid #CAC833; /* Borde decorativo */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: space-between; /* Espaciado uniforme del contenido */
+  box-sizing: border-box; /* Incluye padding en el tamaño */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen dentro de las cards */
+.blog-card img {
+  width: 100%;
+  height: auto;
+  max-height: 150px; /* Limita la altura de las imágenes */
+  margin-bottom: 15px; /* Espaciado con el título */
+  border-radius: 5px; /* Opcional: bordes redondeados */
+  object-fit: cover; /* Ajusta las imágenes al contenedor sin distorsión */
+}
+
+/* Títulos y textos */
+.blog-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.blog-card p {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+/* Hover para las cards */
+.blog-card:hover {
+  transform: translateY(-10px); /* Eleva la card al pasar el cursor */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Añade sombra */
+}
+
+/* Fondo de la sección de contacto */
+.contact {
+  padding: 50px 20px;
+  background: url('wallpaper3.jpg') no-repeat center center / cover; /* Imagen de fondo */
+  color: white;
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Contenedor principal de la sección */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribuye los elementos a los lados */
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 20px;
+  width: 100%; /* Ocupa todo el ancho de la sección */
+  max-width: 1200px; /* Limita el ancho máximo */
+}
+
+/* Información de contacto (columna derecha) */
+.contact-info {
+  flex: 1;
+  max-width: 50%; /* Ocupa el 50% del ancho */
+  text-align: left; /* Alinea el texto a la izquierda */
+  color: #000; /* Texto en negro */
+}
+
+/* Formulario (columna izquierda) */
+.contact-form {
+  flex: 1;
+  max-width: 50%; /* Ocupa el 50% del ancho */
+  background: rgba(255, 255, 255, 0.9); /* Fondo translúcido */
+  padding: 20px;
+  border-radius: 10px;
+  color: #000;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Estilo del formulario */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos dentro del formulario */
+}
+
+.contact-form label {
+  text-align: left; /* Etiquetas alineadas a la izquierda */
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  width: 100%; /* Campos ocupan el ancho completo */
+  max-width: 400px; /* Limita el ancho de los campos */
+}
+
+.contact-form button {
+  background: #8DC640;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #7AB333; /* Color más oscuro al pasar el mouse */
+}
+
+/* Centrar los iconos de redes sociales */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 20px; /* Espaciado uniforme entre los íconos */
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.social-icons img {
+  width: 30px; /* Tamaño uniforme de los íconos */
+  height: 30px;
+  filter: invert(1); /* Asegura visibilidad sobre fondos claros u oscuros */
+  transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.social-icons img:hover {
+  transform: scale(1.2); /* Agranda el icono al pasar el mouse */
+}
+
+/* Estilo general del footer */
+.footer {
+  background-color: #4E5464; /* Gris corporativo */
+  color: white;
+  padding: 20px 20px 10px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribuye columnas */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Contacto */
+.footer-contact img {
+  width: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.footer-contact h3 {
+  color: #8DC640; /* Verde corporativo */
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Enlaces */
+.footer-links h3 {
+  color: #8DC640; /* Verde corporativo */
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #8DC640; /* Verde al pasar el mouse */
+}
+
+/* Redes Sociales */
+.footer-social h3 {
+  color: #8DC640; /* Verde corporativo */
+  margin-bottom: 10px;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+  transform: scale(1.2); /* Efecto hover */
+}
+
+/* Newsletter */
+.footer-newsletter h3 {
+  color: #8DC640; /* Verde corporativo */
+  margin-bottom: 10px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-newsletter input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.footer-newsletter button {
+  background: #8DC640; /* Verde corporativo */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+  background: #7AB333; /* Verde más oscuro */
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #CAC833; /* Amarillo corporativo */
+}
+
+/* Estilos para el contenedor modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+  padding-top: 50px;
+}
+
+/* Contenido del formulario */
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  border: 1px solid #888;
+  width: 50%;
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  color: #000; /* Color de texto negro */
+}
+
+/* Encabezado y párrafos dentro del formulario */
+.modal-content h1,
+.modal-content p {
+  color: #000; /* Color de texto negro */
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Exo", sans-serif;
+}
+
+.modal-content label {
+  color: #000; /* Color negro para etiquetas */
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Exo", sans-serif;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: 2px solid #8dc640; /* Borde verde corporativo */
+  background: #f1f1f1;
+  border-radius: 4px;
+  font-family: "Exo", sans-serif;
+}
+
+/* Resaltar cuando el campo está enfocado */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Botones */
+.clearfix {
+  display: flex; /* Flexbox para alineación horizontal */
+  justify-content: center; /* Centra horizontalmente */
+  gap: 10px; /* Espaciado entre botones */
+}
+
+.clearfix button {
+  width: 120px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Exo", sans-serif;
+}
+
+/* Botón de cancelar */
+.cancelbtn {
+  background-color: #cac833; /* Amarillo corporativo */
+  border: none;
+  color: #000; /* Texto negro */
+}
+
+/* Botón de registrar */
+.signupbtn {
+  background-color: #8dc640; /* Verde corporativo */
+  border: none;
+  color: #fff; /* Texto blanco */
+}
+
+/* Efecto hover en botones */
+.cancelbtn:hover,
+.signupbtn:hover {
+  opacity: 0.9;
+}
+
+/* Estilo para el checkbox */
+.modal-content input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.modal-content input[type="checkbox"]:checked + label {
+  color: #8dc640; /* Verde corporativo cuando está marcado */
+}
+
+/* Enlaces */
+.modal-content a {
+  color: #8dc640; /* Verde corporativo */
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+/* Close (X) button */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  color: #000; /* Negro */
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336; /* Rojo en hover */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 80%; /* Más pequeño en pantallas pequeñas */
+  }
+
+  .clearfix button {
+    width: 100%; /* Botones ocupan todo el ancho */
+  }
+}
+
+/* Estilo general del cuerpo */
+body {
+  font-family: "Exo", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+/* Modal */
+.modal {
+  display: none; /* Ocultar por defecto */
+  position: fixed; /* Fijar en la ventana */
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Habilitar scroll si es necesario */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+  padding-top: 50px;
+}
+
+/* Contenedor del modal */
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto; /* Centrado */
+  border: 1px solid #8dc640;
+  width: 50%; /* Ancho del modal */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  color: #000;
+  box-sizing: border-box; /* Asegurar que el padding no rompa el diseño */
+}
+
+/* Cerrar el modal */
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #f44336;
+}
+
+/* Títulos */
+.modal-content h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #8dc640;
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 40px); /* Ajustar al contenedor con margen interno */
+  padding: 15px;
+  margin: 5px 20px; /* Márgenes laterales */
+  display: block;
+  border: 2px solid #8dc640; /* Color verde corporativo */
+  background: #f1f1f1;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Botones */
+button {
+  padding: 14px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button.cancelbtn {
+  background-color: #cac833; /* Amarillo corporativo */
+  color: #000;
+  cursor: pointer;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 4px;
+}
+
+button.signupbtn {
+  background-color: #8dc640; /* Verde corporativo */
+  color: #fff;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Links */
+.modal-content a {
+  color: #8dc640;
+  text-decoration: none;
+}
+
+.modal-content a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 80%; /* Ancho reducido en pantallas pequeñas */
+    padding: 15px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: calc(100% - 30px);
+    margin: 5px 15px;
+  }
+
+  button {
+    width: 100%; /* Botones ocupan el ancho completo */
+  }
+
+  .close {
+    top: 5px;
+    right: 10px;
+  }
+}
